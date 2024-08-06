@@ -1,11 +1,15 @@
 // components/Navbar.tsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  isActive: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isActive }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -13,32 +17,52 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-green-900  py-4 px-6 md:px-12 fixed top-0 left-0 w-full z-50">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 transition-all duration-300 ${
+        isActive ? "bg-white text-green-900" : "bg-green-900 text-white"
+      }`}
+    >
       <div className="flex items-center justify-between">
         {/* Left Side - Main Title and Links */}
         <div className="flex items-center space-x-4">
           <Link href="/" legacyBehavior>
-            <a className="text-xl font-bold text-white">Better</a>
+            <a className="text-xl font-bold">Better</a>
           </Link>
 
           <div className="hidden md:flex md:space-x-8">
             <Link href="/" legacyBehavior>
-              <a className="px-4 py-2 text-white bg-transparent rounded-full hover:bg-white hover:text-green-900 transition-colors">
+              <a
+                className={`px-4 py-2 rounded-full transition-colors ${
+                  isActive ? "text-green-900 hover:bg-green-900 hover:text-white" : "text-white hover:bg-white hover:text-green-900"
+                }`}
+              >
                 Home
               </a>
             </Link>
             <Link href="/about-us" legacyBehavior>
-              <a className="px-4 py-2 text-white bg-transparent rounded-full hover:bg-white hover:text-green-900 transition-colors">
+              <a
+                className={`px-4 py-2 rounded-full transition-colors ${
+                  isActive ? "text-green-900 hover:bg-green-900 hover:text-white" : "text-white hover:bg-white hover:text-green-900"
+                }`}
+              >
                 About Us
               </a>
             </Link>
             <Link href="/mortgage-calculator" legacyBehavior>
-              <a className="px-4 py-2 text-white bg-transparent rounded-full hover:bg-white hover:text-green-900 transition-colors">
+              <a
+                className={`px-4 py-2 rounded-full transition-colors ${
+                  isActive ? "text-green-900 hover:bg-green-900 hover:text-white" : "text-white hover:bg-white hover:text-green-900"
+                }`}
+              >
                 Mortgage Calculator
               </a>
             </Link>
             <Link href="/start" legacyBehavior>
-              <a className="px-4 py-2 text-white bg-transparent rounded-full hover:bg-white hover:text-green-900 transition-colors">
+              <a
+                className={`px-4 py-2 rounded-full transition-colors ${
+                  isActive ? "text-green-900 hover:bg-green-900 hover:text-white" : "text-white hover:bg-white hover:text-green-900"
+                }`}
+              >
                 Start
               </a>
             </Link>
@@ -49,24 +73,34 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4">
           <a
             href="tel:1234567890"
-            className="flex items-center justify-center w-12 h-12 text-white border-2 border-white rounded-full bg-green-900 hover:bg-white hover:text-green-900 transition-colors"
+            className={`flex items-center justify-center w-12 h-12 border-2 rounded-full transition-colors ${
+              isActive ? "text-green-900 border-green-900 bg-white hover:bg-green-900 hover:text-white" : "text-white border-white bg-green-900 hover:bg-white hover:text-green-900"
+            }`}
           >
             <PhoneIcon />
           </a>
           <Link href="/start" legacyBehavior>
-            <a className="px-4 py-2 text-black bg-green-500 rounded-full font-bold hover:bg-green-900 hover:text-white transition-colors">
+            <a
+              className={`px-4 py-2 font-bold rounded-full transition-colors ${
+                isActive ? "bg-green-500 text-black hover:bg-green-900 hover:text-white" : "bg-green-500 text-black hover:bg-green-900 hover:text-white"
+              }`}
+            >
               Get Started
             </a>
           </Link>
           <Link href="/sign-in" legacyBehavior>
-            <a className="hidden md:block px-4 py-2 text-white bg-transparent rounded-full hover:bg-white hover:text-green-900 transition-colors">
+            <a
+              className={`hidden md:block px-4 py-2 rounded-full transition-colors ${
+                isActive ? "text-green-900 hover:bg-green-900 hover:text-white" : "text-white hover:bg-white hover:text-green-900"
+              }`}
+            >
               Sign In
             </a>
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={toggleSidebar}>
-            <MenuIcon />
+          <button className="md:hidden" onClick={toggleSidebar}>
+            <MenuIcon className={isActive ? "text-green-900" : "text-white"} />
           </button>
         </div>
       </div>
@@ -90,14 +124,10 @@ const Navbar: React.FC = () => {
             <a className="text-gray-800 text-xl hover:text-green-900">Home</a>
           </Link>
           <Link href="/about-us" legacyBehavior>
-            <a className="text-gray-800 text-xl hover:text-green-900">
-              About Us
-            </a>
+            <a className="text-gray-800 text-xl hover:text-green-900">About Us</a>
           </Link>
           <Link href="/mortgage-calculator" legacyBehavior>
-            <a className="text-gray-800 text-xl hover:text-green-900">
-              Mortgage Calculator
-            </a>
+            <a className="text-gray-800 text-xl hover:text-green-900">Mortgage Calculator</a>
           </Link>
           <Link href="/start" legacyBehavior>
             <a className="text-gray-800 text-xl hover:text-green-900">Start</a>
