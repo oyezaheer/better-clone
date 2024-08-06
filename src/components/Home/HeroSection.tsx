@@ -18,22 +18,23 @@ const HeroSection: React.FC = () => {
           />
         </div>
       </div>
-      <div className="relative flex flex-col items-center justify-center h-screen text-center z-10 px-6 md:px-10 lg:px-14">
+      <div className="relative flex flex-col  items-center justify-center  h-screen text-center z-10 px-6 md:px-10 lg:px-14">
         {/* Center content within the viewport */}
-        <div className="flex flex-col items-center justify-center h-[70%] mb-60">
-          <h1 className="font-bold text-[24px] md:text-[48px] lg:text-[110px] text-green-500 leading-tight tracking-tight mb-16">
+        <div className=" relative flex flex-col   items-center justify-center  h-screen mb-0  ">
+          <h1 className="font-bold text-[24px] md:text-[48px] lg:text-[110px]  leading-tight tracking-tight mt-8 sm:mt-16">
             Mortgages <br /> made simple
           </h1>
-          <div className="flex justify-between w-[1000px] space-x-120 mt-[calc(100px)]">
-            {/* Use a positive margin-top to push the div down */}
+          <div className=" flex flex-col  h-screen  items-center justify-center space-y-8 md:space-y-0 md:space-x-96 md:flex-row w-full md:w-[1000px] mt-[calc(100px)] ">
+          
             <Link
               href="/start"
-              className="inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-green-700 transition-all duration-200"
+              className=" inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-green-700 transition-all duration-200 m-8 sm:mb-96 md:mb-0  "
+            //   className="inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-green-700 transition-all duration-200 mt-4 md:mt-0"
             >
               Start my approval
             </Link>
-
-            <div className="flex flex-col items-center space-y-2">
+            <div className=" flex flex-col items-center space-y-2 sm:bg-green-950 sm:rounded-md sm:px-4 sm:py-4 md:bg-transparent">
+            {/* <div className="flex flex-col items-center space-y-2 "> */}
               <div className="flex flex-row items-center">
                 <img
                   src="/assets/google.jpeg"
