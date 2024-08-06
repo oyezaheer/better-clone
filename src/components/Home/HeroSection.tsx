@@ -21,14 +21,14 @@ const HeroSection: React.FC = () => {
       <div className="relative flex flex-col  items-center justify-center  h-screen text-center z-10 px-6 md:px-10 lg:px-14">
         {/* Center content within the viewport */}
         <div className=" relative flex flex-col   items-center justify-center  h-screen mb-0  ">
-          <h1 className="font-bold text-[24px] md:text-[48px] lg:text-[110px]  leading-tight tracking-tight mt-8 sm:mt-16">
+          <h1 className="font-bold text-[24px] md:text-[48px] sm:text-[35px] lg:text-[110px]  leading-tight tracking-tight mt-8 sm:mt-16">
             Mortgages <br /> made simple
           </h1>
           <div className=" flex flex-col  h-screen  items-center justify-center space-y-8 md:space-y-0 md:space-x-96 md:flex-row w-full md:w-[1000px] mt-[calc(100px)] ">
           
             <Link
               href="/start"
-              className=" inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-green-700 transition-all duration-200 m-8 sm:mb-96 md:mb-0  "
+              className=" inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-transparent transition-all duration-200 m-8 sm:mb-96 md:mb-0  "
             //   className="inline-flex items-center justify-center bg-green-500 text-white rounded-full text-base font-bold py-4 px-8 hover:bg-green-700 transition-all duration-200 mt-4 md:mt-0"
             >
               Start my approval
