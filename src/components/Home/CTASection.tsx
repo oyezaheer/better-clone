@@ -17,13 +17,13 @@ const ProductSection: React.FC = () => {
         </h1>
 
         <div className="flex md:flex-row mb-6  sm:space-x-2  md:space-y-0 md:space-x-2">
-          <button className="bg-white border-2 border-gray-300 text-gray-700 px-2 py-0 rounded-full transition-all duration-200 hover:border-4 hover:border-green-600 hover:font-semibold">
+          <button className="flex items-center  p-4 border-2 border-gray-700 rounded-full transition-colors hover:border-green-700 hover:shadow-[inset_0_0_0_3px_rgba(0,128,0,1)]">
             Our products
           </button>
-          <button className="bg-white border-2 border-gray-300 text-gray-700 px-2 py-0 rounded-full transition-all duration-200 hover:border-4 hover:border-green-600 hover:font-semibold">
+          <button className="flex items-center  p-4 border-2 border-gray-700 rounded-full transition-colors hover:border-green-700 hover:shadow-[inset_0_0_0_3px_rgba(0,128,0,1)]">
             Calculators
           </button>
-          <button className="bg-white border-2 border-gray-300 text-gray-700 px-2 py-0 rounded-full transition-all duration-200 hover:border-4 hover:border-green-600 hover:font-semibold">
+          <button className="flex items-center  p-4 border-2 border-gray-700 rounded-full transition-colors hover:border-green-700 hover:shadow-[inset_0_0_0_3px_rgba(0,128,0,1)]">
             Guides & FAQs
           </button>
         </div>
