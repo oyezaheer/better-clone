@@ -1,17 +1,19 @@
 // pages/start/index.tsx
-import Layout from '../components/Layout';
+import React from 'react';
+import Header from '../components/Start/Header';
+// import HelpOptions from '../components/Start/HelpOptions';
+import Stats from '../components/Start/Stats';
+import Footer from '../components/Home/Footer';
+
 
 const Start: React.FC = () => {
   return (
-    <Layout>
-      <div className="p-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold">Get Started</h1>
-          <p>Start your journey with Better.com.</p>
-          {/* Add your start page content here */}
-        </div>
+      <div>
+        <Header />
+        {/* <HelpOptions /> */}
+        <Stats />
+        <Footer />
       </div>
-    </Layout>
   );
 };
 
