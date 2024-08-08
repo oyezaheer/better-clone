@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MiddleImage from "../../../public/assets/home 3.webp"; // Adjust the path accordingly
+import MiddleImage from "../../../public/assets/home3.webp"; // Adjust the path accordingly
 
 const Header: React.FC = () => {
   return (
@@ -12,15 +12,15 @@ const Header: React.FC = () => {
             <p className="ml-5 text-xl text-gray-600">Mortgage</p>
           </div>
           <div className="flex items-center">
-            <svg
+            {/* <svg
               width="120"
               height="30"
               viewBox="0 0 120 30"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Insert Better logo SVG path here */}
-            </svg>
+              {/* Insert Better logo SVG path here *
+            </svg> */}
           </div>
           <div className="hidden lg:flex items-center">
             <div className="bg-green-100 rounded-full p-2 mr-3">

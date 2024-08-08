@@ -10,12 +10,12 @@ const testimonials = [
   },
   {
     name: "Amanda",
-    text: "Amanda's testimonial text here.",
+    text: "Amanda&apos; testimonial text here.",
     image: arianImage,
   },
   {
     name: "Paul",
-    text: "Paul's testimonial text here.",
+    text: "Paul&apos; testimonial text here.",
     image: arianImage,
   },
 ];
@@ -31,7 +31,7 @@ const FeaturesSection: React.FC = () => {
           <div className="w-full lg:w-1/2 lg:pl-12 mt-8 lg:mt-32 order-1 lg:order-2">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-center lg:text-left">
               Find out why <br className="hidden lg:inline" />
-              we're better.
+              we&apos;re better.
             </h2>
             <div className="flex justify-center lg:justify-start">
               <button className="bg-green-800 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-900 transition-colors">

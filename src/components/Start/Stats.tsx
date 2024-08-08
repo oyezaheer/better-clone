@@ -6,7 +6,7 @@ const Stats: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8 mb-32 lg:w-1/2 mt-20">
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-center mb-6 text-gray-600">
-        Hi, I'm Betty!
+        Hi, I&apos;m Betty!
       </h1>
       <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-gray-600 mb-8">
         What can I help you with?
@@ -45,7 +45,7 @@ const Stats: React.FC = () => {
 
       <div className="bg-green-50 p-4 sm:p-6 rounded-lg mx-4 sm:mx-8 md:mx-20">
         <p className="text-center text-lg sm:text-xl mb-4 text-gray-500">
-          After a few questions, you'll unlock:
+          After a few questions, you&apos;ll unlock:
         </p>
         <ul className="space-y-2">
           {[

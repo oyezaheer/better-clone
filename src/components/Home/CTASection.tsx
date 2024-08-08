@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import img1 from "../../../public/assets/first-home.webp";
-import img2 from "../../../public/assets/home 2.webp";
-import img3 from "../../../public/assets/home 3.webp";
-import img4 from "../../../public/assets/home 4.webp";
+import img2 from "../../../public/assets/home2.webp";
+import img3 from "../../../public/assets/home3.webp";
+import img4 from "../../../public/assets/home4.webp";
 
 const ProductSection: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const ProductSection: React.FC = () => {
         <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">
           Got questions?
           <br />
-          We've got answers
+          We&apos;ve got answers
         </h1>
 
         <div className="flex md:flex-row mb-6  sm:space-x-2  md:space-y-0 md:space-x-2">
