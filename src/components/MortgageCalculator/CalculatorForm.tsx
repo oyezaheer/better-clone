@@ -30,7 +30,7 @@ const CalculatorForm: React.FC = () => {
     const totalMonthlyPayment =
       mortgagePayment + propertyTax + homeInsurance + hoaFees + utilities;
     setMonthlyPayment(Math.round(totalMonthlyPayment));
-  },[]);
+  },[downPayment, hoaFees, homeInsurance, homePrice, interestRate, loanTerm, propertyTax, utilities]);
 
   useEffect(() => {
     calculateMonthlyPayment();
