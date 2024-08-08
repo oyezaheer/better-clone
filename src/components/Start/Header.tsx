@@ -12,17 +12,14 @@ const Header: React.FC = () => {
             <p className="ml-5 text-xl text-gray-600">Mortgage</p>
           </div>
           <div className="flex items-center">
-           
+            
           </div>
           <div className="hidden lg:flex items-center">
             <div className="bg-green-100 rounded-full p-2 mr-3">
               <span className="material-icons text-gray-700">phone</span>
             </div>
             <span className="text-lg text-gray-600 mr-2">Need help? Call</span>
-            <a
-              href="tel:4155238837"
-              className="text-lg font-semibold text-gray-800"
-            >
+            <a href="tel:4155238837" className="text-lg font-semibold text-gray-800">
               (415) 523 8837
             </a>
           </div>

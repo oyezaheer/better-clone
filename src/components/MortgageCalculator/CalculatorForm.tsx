@@ -34,16 +34,7 @@ const CalculatorForm: React.FC = () => {
 
   useEffect(() => {
     calculateMonthlyPayment();
-  }, [
-    homePrice,
-    downPayment,
-    interestRate,
-    loanTerm,
-    propertyTax,
-    homeInsurance,
-    hoaFees,
-    utilities,
-  ]);
+  }, [calculateMonthlyPayment]);
 
   const handleHomePriceChange = (value: number) => {
     setHomePrice(value);
