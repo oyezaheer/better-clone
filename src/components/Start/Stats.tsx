@@ -1,6 +1,6 @@
 // components/start/Stats.tsx
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Stats: React.FC = () => {
   return (
