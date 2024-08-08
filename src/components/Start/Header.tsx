@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import MiddleImage from "../../../public/assets/home3.webp"; 
 
 const Header: React.FC = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex flex-col">
@@ -33,7 +32,7 @@ const Header: React.FC = () => {
             <div className="overflow-hidden rounded-full w-16 h-16 flex items-center justify-center bg-white">
               <div className="relative w-full h-full">
                 <Image
-                  src={MiddleImage}
+                  src="/assets/home3.webp"
                   alt="Middle Image"
                   layout="fill"
                   objectFit="cover"
@@ -44,8 +43,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-    
+    </header>
   );
 };
 
