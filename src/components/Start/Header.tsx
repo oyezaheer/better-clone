@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MiddleImage from "../../../public/assets/home3.webp"; // Adjust the path accordingly
+import MiddleImage from "../../../public/assets/home3.webp"; 
 
 const Header: React.FC = () => {
   return (
@@ -24,7 +24,6 @@ const Header: React.FC = () => {
             </a>
           </div>
         </div>
-        {/* Horizontal line section */}
         <div className="relative">
           <hr
             className="border-2 border-gray-200 my-4 mx-auto"

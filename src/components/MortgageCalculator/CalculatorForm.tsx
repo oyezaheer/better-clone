@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 const CalculatorForm: React.FC = () => {
   const [homePrice, setHomePrice] = useState(300000);
@@ -15,7 +15,7 @@ const CalculatorForm: React.FC = () => {
   const [hoaFees, setHoaFees] = useState(132);
   const [utilities, setUtilities] = useState(100);
 
-  const calculateMonthlyPayment = () => {
+  const calculateMonthlyPayment = useCallback(() => {
     const P = homePrice - downPayment; // Principal loan amount
     const r = interestRate / 100 / 12; // Monthly interest rate
     const n = loanTerm * 12; // Total number of payments
@@ -30,7 +30,7 @@ const CalculatorForm: React.FC = () => {
     const totalMonthlyPayment =
       mortgagePayment + propertyTax + homeInsurance + hoaFees + utilities;
     setMonthlyPayment(Math.round(totalMonthlyPayment));
-  };
+  },[]);
 
   useEffect(() => {
     calculateMonthlyPayment();
