@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "target": "es5",                      // Ensures compatibility with older browsers
+    "lib": ["dom", "dom.iterable", "esnext"], // Includes necessary libraries
+    "allowJs": true,                     // Allows JavaScript files to be compiled
+    "skipLibCheck": true,                // Skips type checking of declaration files
+    "strict": true,                      // Enables all strict type-checking options
+    "noEmit": true,                      // Disables emitting of compiled files
+    "esModuleInterop": true,             // Enables compatibility with CommonJS modules
+    "module": "esnext",                  // Specifies the module code generation
+    "moduleResolution": "node",          // Resolves modules using Node.js module resolution
+    "resolveJsonModule": true,           // Allows importing JSON modules
+    "isolatedModules": true,             // Ensures that each file can be safely transpiled independently
+    "jsx": "react-jsx",                  // Uses the new JSX transform introduced in React 17
+    "incremental": true,                 // Enables incremental compilation
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"]                 // Sets up path alias for easier imports
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "tailwind.config.js"
+  ],
   "exclude": ["node_modules"]
 }
