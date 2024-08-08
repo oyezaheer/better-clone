@@ -15,7 +15,7 @@
     "moduleResolution": "node", // Resolves modules using Node.js module resolution
     "resolveJsonModule": true, // Allows importing JSON modules
     "isolatedModules": true, // Ensures that each file can be safely transpiled independently
-    "jsx": "preserve", // Uses the new JSX transform introduced in React 17
+    "jsx": "react-jsx", // Uses the new JSX transform introduced in React 17
     "incremental": true, // Enables incremental compilation
     "paths": {
       "@/*": [

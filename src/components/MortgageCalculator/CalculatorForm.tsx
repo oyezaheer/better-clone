@@ -13,7 +13,7 @@ const CalculatorForm: React.FC = () => {
   const [propertyTax, setPropertyTax] = useState(265);
   const [homeInsurance, setHomeInsurance] = useState(132);
   const [hoaFees, setHoaFees] = useState(132);
-  const [utilities, setUtilities] = useState(100);
+  const [utilities] = useState(100);
 
   const calculateMonthlyPayment = useCallback(() => {
     const P = homePrice - downPayment; // Principal loan amount
