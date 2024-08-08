@@ -1,20 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",                      // Ensures compatibility with older browsers
-    "lib": ["dom", "dom.iterable", "esnext"], // Includes necessary libraries
-    "allowJs": true,                     // Allows JavaScript files to be compiled
-    "skipLibCheck": true,                // Skips type checking of declaration files
-    "strict": true,                      // Enables all strict type-checking options
-    "noEmit": true,                      // Disables emitting of compiled files
-    "esModuleInterop": true,             // Enables compatibility with CommonJS modules
-    "module": "esnext",                  // Specifies the module code generation
-    "moduleResolution": "node",          // Resolves modules using Node.js module resolution
-    "resolveJsonModule": true,           // Allows importing JSON modules
-    "isolatedModules": true,             // Ensures that each file can be safely transpiled independently
-    "jsx": "react-jsx",                  // Uses the new JSX transform introduced in React 17
-    "incremental": true,                 // Enables incremental compilation
+    "target": "es5", // Ensures compatibility with older browsers
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Includes necessary libraries
+    "allowJs": true, // Allows JavaScript files to be compiled
+    "skipLibCheck": true, // Skips type checking of declaration files
+    "strict": true, // Enables all strict type-checking options
+    "noEmit": true, // Disables emitting of compiled files
+    "esModuleInterop": true, // Enables compatibility with CommonJS modules
+    "module": "esnext", // Specifies the module code generation
+    "moduleResolution": "node", // Resolves modules using Node.js module resolution
+    "resolveJsonModule": true, // Allows importing JSON modules
+    "isolatedModules": true, // Ensures that each file can be safely transpiled independently
+    "jsx": "preserve", // Uses the new JSX transform introduced in React 17
+    "incremental": true, // Enables incremental compilation
     "paths": {
-      "@/*": ["./src/*"]                 // Sets up path alias for easier imports
+      "@/*": [
+        "./src/*"
+      ] // Sets up path alias for easier imports
     }
   },
   "include": [
@@ -24,5 +30,7 @@
     ".next/types/**/*.ts",
     "tailwind.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
